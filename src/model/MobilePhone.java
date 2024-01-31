@@ -45,4 +45,13 @@ public class MobilePhone {
         this.myContacts.add(contact);
         return true;
     }
+
+    public boolean updateContact(Contact oldContact, Contact newContact){
+        int oldContactIndex = findContact(oldContact);
+        if(oldContactIndex < 0 ){
+            return false;
+        }
+        this.myContacts.set(oldContactIndex, newContact);
+        return true;
+    }
 }
