@@ -71,4 +71,11 @@ public class MobilePhone {
         return this.myContacts.get(contactIndex);
     }
 
+    public void printContact(){
+        for(int i = 0; i < this.myContacts.size(); i++){
+            Contact contact = this.myContacts.get(i);
+            System.out.println((i + 1) + "->" + contact.getName() + "->" + contact.getPhoneNumber());
+        }
+    }
+
 }
