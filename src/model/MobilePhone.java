@@ -54,4 +54,13 @@ public class MobilePhone {
         this.myContacts.set(oldContactIndex, newContact);
         return true;
     }
+
+    public boolean removeContact(Contact contact){
+        if(findContact(contact) < 0){
+            return false;
+        }
+        this.myContacts.remove(contact);
+        return true;
+    }
+
 }
