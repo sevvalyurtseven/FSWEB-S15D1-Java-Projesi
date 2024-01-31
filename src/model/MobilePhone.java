@@ -14,9 +14,16 @@ public class MobilePhone {
 
     //findContact: Contact türünde bir parametre alır ve int değer döndürür. Dönüş değeri Contact objesinin listedeki
     // indeksi olmalıdır. Eğer eleman listede yoksa -1 değeri döner.
+
+    private int findContact(Contact contact){
+        return this.myContacts.indexOf(contact);
+    }
+
+    //findContact: yukardaki findContact metodu ile aynı şekilde çalışır. Sadece parametresinin tipi String olmalıdır.
+
     private int findContact(String name){
         for(int i = 0; i < myContacts.size(); i++){
-            Contact contact = myContacts.get(i);
+            Contact contact = myContacts.get(i); //i. siradaki contact'i elde ederiz
             if(contact.getName().equalsIgnoreCase(name)){
                 return i;
             }
