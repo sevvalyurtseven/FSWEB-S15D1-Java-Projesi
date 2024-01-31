@@ -63,4 +63,12 @@ public class MobilePhone {
         return true;
     }
 
+    public Contact queryContact(String contactName){
+        int contactIndex = findContact(contactName);
+        if(contactIndex < 0 ){
+            return null;
+        }
+        return this.myContacts.get(contactIndex);
+    }
+
 }
