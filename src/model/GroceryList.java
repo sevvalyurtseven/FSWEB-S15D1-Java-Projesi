@@ -49,4 +49,9 @@ public class GroceryList {
     private String[] splitItems(String items){
         return items.split(",");  //virgule gore split ediyor ve bir array donuyor.
     }
+
+    public void printSorted(){
+        System.out.println("Mevcut Pazar Listesi: ");
+        this.items.forEach(item -> System.out.println(item));
+    }
 }
