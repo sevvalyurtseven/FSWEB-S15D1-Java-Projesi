@@ -25,6 +25,19 @@ public class GroceryList {
         }
     }
 
+    public void removeItems(String items){
+        String[] splitItems = splitItems(items);
+        for(String item : splitItems){
+            String trimmedItem = item.trim();
+            if(checkItemIsInList(trimmedItem)){
+                System.out.println("Remove operation failed because item is not exist: " + trimmedItem);
+            }
+            else {
+               this.items.remove(trimmedItem);
+            }
+        }
+    }
+
     private void sortItems(){
         Collections.sort(items);
     }
