@@ -29,7 +29,7 @@ public class GroceryList {
         String[] splitItems = splitItems(items);
         for(String item : splitItems){
             String trimmedItem = item.trim();
-            if(checkItemIsInList(trimmedItem)){
+            if(!checkItemIsInList(trimmedItem)){
                 System.out.println("Remove operation failed because item is not exist: " + trimmedItem);
             }
             else {
