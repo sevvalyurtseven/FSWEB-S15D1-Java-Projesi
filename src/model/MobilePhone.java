@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class MobilePhone {
     private String myNumber;
@@ -28,6 +29,17 @@ public class MobilePhone {
                 return i;
             }
         }
+//TODO: STREAM ILE ÇÖZULEBİLİR
+       /*
+       Optional<Contact> optionalContact = myContacts
+                .stream()
+                .filter(contact -> contact.getName().equalsIgnoreCase(name))
+                .findFirst();
+        if(optionalContact.isPresent()){
+            return findContact(optionalContact.get());
+        }
+
+        */
         return -1;
     }
 
